@@ -13,24 +13,20 @@ Required Library/SDK for android (android 2.1 above)
 Step to implement
 
 1. main.js
-   
+   ```javascript
       function printBt(){
-      	
       	cordova.exec(fnSuccess, fnError, "StarBTPrint", "searchBT", ["Hi Roney .... Success Printing"]);
       }
-      
       function prints(){
       	cordova.exec(fnSuccess, fnError, "StarBTPrint", "startPrnt", ["hhhhhhhhhhhhhhhhh"]);
       }
-      
       function fnSuccess(result){
       	alert("Success= "+result);
       }
-
       function fnError(){
       	alert("Failure= "+result);
       }
-     
+  ```javascript   
 
 2. Create package in src folder org.phonegap.plugin
     
