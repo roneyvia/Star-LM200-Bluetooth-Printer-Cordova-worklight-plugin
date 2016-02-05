@@ -14,7 +14,7 @@ Step to implement
 
 1. main.js
    
-          function printBt(){
+      function printBt(){
       	
       	cordova.exec(fnSuccess, fnError, "StarBTPrint", "searchBT", ["Hi Roney .... Success Printing"]);
       }
@@ -26,16 +26,32 @@ Step to implement
       function fnSuccess(result){
       	alert("Success= "+result);
       }
+
       function fnError(){
       	alert("Failure= "+result);
       }
      
 
+2. Create package in src folder org.phonegap.plugin
+    
+    copy StarBTPrint.java  here.
+
+3. AndroidManifest.xml file
+    
+  Give perimission for bluetooth connectivity    
+
+    ```
+       <uses-permission android:name="android.permission.BLUETOOTH" /> 
+       <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> 
+    ```
+
 2. config.xml
   
-     ```xml
-       <feature name="StarBTPrint">
+     ```
+      <feature name="StarBTPrint">
             <param name="android-package" value="org.phonegap.plugin.StarBTPrint"/>
-     </feature>'''
-     
-3.  
+     </feature>
+     ```
+Author
+
+Roney Francis
